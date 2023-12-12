@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         DOCKER_IMAGE_NAME = 'shipmentuserservice'
-        MAVEN_HOME = tool 'Maven'
+        MAVEN_HOME = tool 'MavenTeam7'
     }
     stages {
         stage('Checkout') {
@@ -13,7 +13,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    def mvnHome = tool 'Maven'
+                    def mvnHome = tool 'MavenTeam7'
                     def mavenCmd = "${mvnHome}/bin/mvn"
                     sh "${mavenCmd} clean install"
                 }

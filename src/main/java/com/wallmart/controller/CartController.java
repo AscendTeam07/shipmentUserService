@@ -25,5 +25,7 @@ public class CartController {
         return new ResponseEntity<>(shippingCartDTO, HttpStatus.OK);
     }
 
-   
+    public String getCost(){
+        retun "cost";
+    }
 } 
