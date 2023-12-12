@@ -15,7 +15,7 @@ pipeline {
                 script {
                     def mvnHome = tool 'MavenTeam7'
                     def mavenCmd = "${mvnHome}/bin/mvn"
-                    cmd "${mavenCmd} clean install"
+                    bat "${mavenCmd} clean install"
                 }
             }
         }
