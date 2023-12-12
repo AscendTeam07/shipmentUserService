@@ -24,4 +24,8 @@ public class CartController {
         ShippingCartDTO shippingCartDTO = shippingService.calculateShippingCost(cartRequestDTO.getCartId(), cartRequestDTO.getUserId());
         return new ResponseEntity<>(shippingCartDTO, HttpStatus.OK);
     }
+
+    public String getCost(){
+        retun "cost";
+    }
 } 
