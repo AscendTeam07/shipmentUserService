@@ -5,7 +5,7 @@ import com.wallmart.entities.User;
 
 public interface UserRepository extends MongoRepository<User, String> {
     
-    User findByUserId(Long userId);
+    User findByUserId(Integer userId);
         
 }
 

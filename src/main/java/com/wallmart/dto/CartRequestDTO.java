@@ -3,7 +3,7 @@ package com.wallmart.dto;
 public class CartRequestDTO {
 	
 	private Long cartId;
-    private Long userId;
+    private int userId;
 
     public Long getCartId() {
 		return cartId;
@@ -11,10 +11,10 @@ public class CartRequestDTO {
 	public void setCartId(Long cartId) {
 		this.cartId = cartId;
 	}
-	public Long getUserId() {
+	public int getUserId() {
 		return userId;
 	}
-	public void setUserId(Long userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 

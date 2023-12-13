@@ -26,7 +26,7 @@ public class ShippingServiceImpl implements ShippingService {
     private ShippingCartRepository shippingCartRepository; 
     
     @Override
-    public ShippingCartDTO calculateShippingCost(Long cartId, Long userId) {
+    public ShippingCartDTO calculateShippingCost(Long cartId, int userId) {
         User user = userRepository.findByUserId(userId);
         Distance distance = distanceRepository.findByZipcode(user.getZipcode());
         

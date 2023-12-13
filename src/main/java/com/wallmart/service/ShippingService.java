@@ -4,5 +4,5 @@ import com.wallmart.dto.ShippingCartDTO;
 
 public interface ShippingService {
 
-    ShippingCartDTO calculateShippingCost(Long cartId, Long userId);
+    ShippingCartDTO calculateShippingCost(Long cartId, int userId);
 }

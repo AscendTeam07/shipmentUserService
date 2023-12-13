@@ -9,13 +9,13 @@ public class User {
     @Id
     private String id;
 
-    private Long userId;
+    private int userId;
     private String zipcode;
     private String userName;
     private String emailId;
     private String mobile;
     
-    public User(Long userId, String zipcode, String userName, String emailId, String mobile) {
+    public User(int userId, String zipcode, String userName, String emailId, String mobile) {
         this.userId = userId;
         this.zipcode = zipcode;
         this.userName = userName;
@@ -24,11 +24,11 @@ public class User {
     }
 
 
-    public Long getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
