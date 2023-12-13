@@ -22,7 +22,7 @@ pipeline {
         stage('Docker Build') {
             steps {
                 script {
-                    def dockerImage = docker.build(env.DOCKER_IMAGE_NAME, "--file Dockerfile")
+                    def dockerImage = docker.build(env.DOCKER_IMAGE_NAME)
                 }
             }
         }
