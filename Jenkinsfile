@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKER_IMAGE_NAME = 'shipmentuserservice'
+        DOCKER_IMAGE_NAME = 'nagendraranga/shipmentuserservice'
         MAVEN_HOME = tool 'MavenTeam7'
     }
     stages {
@@ -22,7 +22,7 @@ pipeline {
         stage('Docker Build') {
             steps {
                 script {
-                    def dockerImage = docker.build(env.DOCKER_IMAGE_NAME, "--file Dockerfile .")
+                    def dockerImage = docker.build(env.DOCKER_IMAGE_NAME, "--file Dockerfile")
                 }
             }
         }
