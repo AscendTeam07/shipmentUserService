@@ -19,6 +19,9 @@ pipeline {
                 }
             }
         }
+         environment {
+    DOCKERHUB_CREDENTIALS = credentials('dockerhub')
+  }
         stage('Docker Build') {
             steps {
                 script {
