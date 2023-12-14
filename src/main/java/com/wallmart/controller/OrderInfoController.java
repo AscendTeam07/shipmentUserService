@@ -17,10 +17,7 @@ public class OrderInfoController {
 
     @PostMapping("/updateOrder")
     public OrderInfo calculateShipmentCharges(@RequestBody OrderInfo orderInfo) {
+    	
         return orderInfoRepository.save(orderInfo);
-    }
-
-    public String hello(){
-        return "hello";
     }
 }
