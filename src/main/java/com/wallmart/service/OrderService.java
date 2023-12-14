@@ -1,5 +1,5 @@
 package com.wallmart.service;
 
 public interface OrderService {
-    void processOrder(Long itemId, String customerAddress, String customerMobile, String customerEmail);
+    void processOrder(int itemId, String customerAddress, String customerMobile, String customerEmail);
 }

@@ -10,6 +10,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class OrderInfo {
 
    @Id
+   private String id;
    private Integer orderId;
    private Integer cartId;
    private Integer userId;
@@ -20,6 +21,7 @@ public class OrderInfo {
    private String dateOfDelivery;
    private String statusOfOrder;
    
+    
 	public Integer getOrderId() {
 		return orderId;
 	}

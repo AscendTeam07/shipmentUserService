@@ -15,7 +15,7 @@ public class OrderRequestDto {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	    private ObjectId id;
-		private Long itemId;
+		private int itemId;
 	    private String customerAddress;
 	    private String customerMobile;
 	    private String customerEmail;

@@ -5,7 +5,6 @@ import java.time.LocalDate;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import com.wallmart.dao.OrderRepository;
@@ -33,7 +32,7 @@ public class OrderServiceImpl implements OrderService {
 //    @Autowired
 //    private KafkaTemplate<String, OrderMessage> kafkaTemplate; 
     @Override
-    public void processOrder(Long itemId, String customerAddress, String customerMobile, String customerEmail) {
+    public void processOrder(int itemId, String customerAddress, String customerMobile, String customerEmail) {
         // Retrieve the product from the database using itemId
     	Product product = productRepository.findByProductId(itemId);
 		if (product == null) {

@@ -9,6 +9,6 @@ import com.wallmart.entities.Product;
 
 @Repository
 public interface ProductRepository extends MongoRepository<Product, ObjectId> {
-	Product findByProductId(long productId);
+	Product findByProductId(int productId);
    
 }

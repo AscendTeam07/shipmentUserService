@@ -27,7 +27,8 @@ public class ShipmentServiceImpl implements ShipmentService {
         response.setPid(request.getPid());
 
         // Find the rule based on distance and weight
-        Rule rule = findRule(request.getDistance(), getProductWeight(request.getPid()));
+        double wt = getProductWeight(request.getPid());
+        Rule rule = findRule(request.getDistance(), (int)wt );
 
         // Calculate charges
         if (rule != null) {
@@ -62,13 +63,12 @@ public class ShipmentServiceImpl implements ShipmentService {
         return shipmentOption;
     }
 
-    private int getProductWeight(int productId) {
+    private double getProductWeight(int productId) {
         // Logic to get the weight from the product table based on the productId
         // Adjust this logic based on your specific requirements
 
         Product product = productRepository.findByProductId(productId);
-        return (product != null) ? (int) product.getWeight() : 0;
+        return (product != null) ? (double) product.getWeight() : 0;
     }
 
 }
-

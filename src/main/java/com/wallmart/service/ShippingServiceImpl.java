@@ -26,7 +26,7 @@ public class ShippingServiceImpl implements ShippingService {
     private ShippingCartRepository shippingCartRepository; 
     
     @Override
-    public ShippingCartDTO calculateShippingCost(Long cartId, Long userId) {
+    public ShippingCartDTO calculateShippingCost(Long cartId, int userId) {
         User user = userRepository.findByUserId(userId);
         Distance distance = distanceRepository.findByZipcode(user.getZipcode());
         
@@ -36,7 +36,7 @@ public class ShippingServiceImpl implements ShippingService {
         shippingCartDTO.setShippingId(generatedShippingId);
         shippingCartDTO.setCartId(cartId);
         shippingCartDTO.setTypeOfShipping(distance.getTypeOfShipping());
-        shippingCartDTO.setDestinationOfShipping(user.getZipcode());
+        shippingCartDTO.setDestinationOfShipping(user.getAddress());
         shippingCartDTO.setShippingCost(distance.getShippingCost());
         shippingCartDTO.setDeliveryDuration(distance.getDeliveryDuration());
 
