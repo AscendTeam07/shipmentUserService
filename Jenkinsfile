@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
         DOCKER_IMAGE_NAME = 'nagendraranga/shipmentuserservice'
+        DOCKERHUB_CREDENTIALS = credentials('dockerhub')
         MAVEN_HOME = tool 'MavenTeam7'
     }
     stages {
@@ -19,9 +20,7 @@ pipeline {
                 }
             }
         }
-         environment {
-    DOCKERHUB_CREDENTIALS = credentials('dockerhub')
-  }
+
         stage('Docker Build') {
             steps {
                 script {
