@@ -36,7 +36,7 @@ public class ShippingServiceImpl implements ShippingService {
         shippingCartDTO.setShippingId(generatedShippingId);
         shippingCartDTO.setCartId(cartId);
         shippingCartDTO.setTypeOfShipping(distance.getTypeOfShipping());
-        shippingCartDTO.setDestinationOfShipping(user.getZipcode());
+        shippingCartDTO.setDestinationOfShipping(user.getAddress());
         shippingCartDTO.setShippingCost(distance.getShippingCost());
         shippingCartDTO.setDeliveryDuration(distance.getDeliveryDuration());
 

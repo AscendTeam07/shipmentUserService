@@ -14,17 +14,29 @@ public class User {
     private String userName;
     private String emailId;
     private String mobile;
+    private String address;
     
-    public User(int userId, String zipcode, String userName, String emailId, String mobile) {
+    public User(int userId, String zipcode, String userName, String emailId, String mobile, String address) {
         this.userId = userId;
         this.zipcode = zipcode;
         this.userName = userName;
         this.emailId = emailId;
         this.mobile = mobile;
+        this.address = address;
     }
 
+    
+    public String getAddress() {
+		return address;
+	}
 
-    public int getUserId() {
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+
+	public int getUserId() {
         return userId;
     }
 
